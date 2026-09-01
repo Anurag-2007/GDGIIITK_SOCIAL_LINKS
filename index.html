@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <link rel="shortcut icon" href="https://cdn.bio.link/uploads/profile_pictures/2024-11-13/vMHf9wXBBNVYoGX5ezgif52082974c01.gif" type="image/webp">
+    <link rel="icon" href="https://cdn.bio.link/uploads/profile_pictures/2024-11-13/vMHf9wXBBNVYoGX5ezgif52082974c01.gif" type="image/webp">
+    <meta name="description" content="GDG on campus Indian Institute of Information Technology, Kalyani" />
+    <meta property="og:title" content="Google Developers Groups, IIIT Kalyani" />
+    <link rel="canonical" href="https://gdgiiitk.bio.link" />
+    <meta property="og:url" content="https://gdgiiitk.bio.link" />
+    <meta property="og:description" content="GDG on campus Indian Institute of Information Technology, Kalyani" />
+    <meta property="og:image:secure_url" content="https://cdn.bio.link/uploads/profile_pictures/2024-11-13/vMHf9wXBBNVYoGX5ezgif52082974c01.gif" />
+    <meta property="og:image" content="https://cdn.bio.link/uploads/profile_pictures/2024-11-13/vMHf9wXBBNVYoGX5ezgif52082974c01.gif" />
+    <meta property="profile:username" content="gdgiiitk" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Google Developers Groups, IIIT Kalyani" />
+    <meta name="twitter:image" content="https://cdn.bio.link/uploads/profile_pictures/2024-11-13/vMHf9wXBBNVYoGX5ezgif52082974c01.gif" />
+    <meta name="twitter:url" content="https://gdgiiitk.bio.link" />
+    <link rel="preload" as="image" href="https://cdn.bio.link/uploads/profile_pictures/2024-11-13/vMHf9wXBBNVYoGX5ezgif52082974c01.gif" />
+    <title>Google Developers Groups, IIIT Kalyani</title>
+    <meta name="robots" content="index, follow" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.bio.link/uploads/profile_pictures/2024-11-13/vMHf9wXBBNVYoGX5ezgif52082974c01.gif">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            overflow-x: hidden;
+            
+        }
+
+        /* Blurred Background Image */
+        .page-image {
+            height: 100%;
+            left: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: blur(1px);
+            -webkit-filter: blur(3px);
+            /* Prevents blur bleeding edges */
+            z-index: -2;
+        }
+
+        /* Dark overlay to make content readable over the blurred image */
+        .page-overlay {
+            background: rgba(0, 0, 0, 0.45);
+            height: 100vh;
+            left: 0;
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            z-index: -1;
+        }
+
+        .flex { display: flex; }
+        .flex-both-center { align-items: center; display: flex; justify-content: center; }
+        .flex-h-center { display: flex; justify-content: center; }
+        .flex-wrap { flex-wrap: wrap; }
+        .item-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .relative { position: relative; }
+        .absolute { position: absolute; }
+        .w-full { width: 100%; }
+        .m-auto { margin: auto; }
+        
+        .mt-12 { margin-top: 12px; }
+        .mt-16 { margin-top: 16px; }
+        .mt-24 { margin-top: 24px; }
+        .ml-8 { margin-left: 8px; }
+        
+        .py-10 { padding-top: 10px; padding-bottom: 10px; }
+        
+        .text-center { text-align: center; }
+        .text-fs-16 { font-size: 16px; }
+        .ln-h-22 { line-height: 22px; }
+        
+        .page-full-wrap {
+            margin-top: 24px;
+            padding-bottom: 100px;
+            width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 10;
+        }
+
+        .display-image {
+            border-radius: 50%;
+            display: block;
+            height: 96px;
+            width: 96px;
+            object-fit: cover;
+        }
+
+        .page-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: #ffffff;
+        }
+
+        .page-bioline {
+            font-weight: 500;
+            color: hsla(0, 0%, 100%, .9);
+        }
+
+        .page-social {
+            cursor: pointer;
+            display: block;
+            margin: 0 10px 12px;
+            transition: transform 0.1s ease-in-out;
+        }
+        .page-social:hover {
+            transform: scale(1.1);
+        }
+        .page-social svg {
+            height: 28px;
+            width: 28px;
+        }
+        .social-icon-anchor {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .social-icon-fill path, .social-icon-fill circle, .social-icon-fill rect {
+            fill: #FFFFFF;
+        }
+
+        .page-item-wrap {
+            margin: 16px 0;
+            transition: transform 0.15s cubic-bezier(.17,.67,.29,2.71) 0s;
+            position: relative;
+        }
+        .page-item-wrap:hover {
+            transform: scale(1.015);
+        }
+        
+        .page-item {
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 52px;
+            box-sizing: border-box;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .page-item-each {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: none;
+            border-radius: 52px;
+            min-height: 60px;
+            box-sizing: border-box;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .link-each-image {
+            height: 43px;
+            left: 9px;
+            object-fit: cover;
+            position: absolute;
+            width: 43px;
+            border-radius: 100%;
+        }
+
+        .item-title {
+            width: 55%;
+            word-break: break-word;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .page-full-wrap {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img class="page-image" src="countdown.png" alt="background"/>
+    <div class="page-overlay"></div>
+
+    <div class="min-h-full flex-h-center" id="background_div">
+        <div class="page-full-wrap relative">
+            
+            <img id="displayImage" class="display-image m-auto" src="https://cdn.bio.link/uploads/profile_pictures/2024-11-13/vMHf9wXBBNVYoGX5ezgif52082974c01.gif" alt="Profile Picture"/>
+            
+            <h1 class="page-title mt-16 text-center">
+                GDG On Campus IIIT Kalyani
+            </h1>
+            <h2 class="page-bioline text-fs-16 mt-12 ln-h-22 text-center">
+                Google Developer Groups at Indian Institute of Information Technology, Kalyani.
+            </h2>
+            
+            <div class="flex-both-center flex-wrap mt-16">
+
+                <div class="page-social relative">
+                    <a class="social-icon-anchor" aria-label="instagram" target="_blank" rel="noopener nofollow" href="https://instagram.com/gdgiiitkalyani"></a>
+                    <svg class="social-icon-fill" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.25 9C0.25 4.16751 4.16751 0.25 9 0.25H21C25.8325 0.25 29.75 4.16751 29.75 9V21C29.75 25.8325 25.8325 29.75 21 29.75H9C4.16751 29.75 0.25 25.8325 0.25 21V9ZM9 1.75C4.99594 1.75 1.75 4.99594 1.75 9V21C1.75 25.0041 4.99594 28.25 9 28.25H21C25.0041 28.25 28.25 25.0041 28.25 21V9C28.25 4.99594 25.0041 1.75 21 1.75H9ZM24 7.75H22V6.25H24V7.75ZM8.25 15C8.25 11.2721 11.2721 8.25 15 8.25C18.7279 8.25 21.75 11.2721 21.75 15C21.75 18.7279 18.7279 21.75 15 21.75C11.2721 21.75 8.25 18.7279 8.25 15ZM15 9.75C12.1005 9.75 9.75 12.1005 9.75 15C9.75 17.8995 12.1005 20.25 15 20.25C17.8995 20.25 20.25 17.8995 20.25 15C20.25 12.1005 17.8995 9.75 15 9.75Z" fill="white"/></svg>
+                </div>
+                
+                <div class="page-social relative">
+                    <a class="social-icon-anchor" aria-label="linkedin" target="_blank" rel="noopener nofollow" href="https://www.linkedin.com/company/gdg-iiit-kalyani"></a>
+                    <svg class="social-icon-fill" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.25 3C0.25 1.48122 1.48122 0.25 3 0.25H27C28.5188 0.25 29.75 1.48122 29.75 3V27C29.75 28.5188 28.5188 29.75 27 29.75H3C1.48122 29.75 0.25 28.5188 0.25 27V3ZM3 1.75C2.30964 1.75 1.75 2.30964 1.75 3V27C1.75 27.6904 2.30964 28.25 3 28.25H27C27.6904 28.25 28.25 27.6904 28.25 27V3C28.25 2.30964 27.6904 1.75 27 1.75H3ZM10 9.75H8V8.25H10V9.75ZM8.25 22V12H9.75V22H8.25ZM12.25 12H13.75V13.5359C14.5997 12.7384 15.7428 12.25 17 12.25C19.6234 12.25 21.75 14.3766 21.75 17V22H20.25V17C20.25 15.2051 18.7949 13.75 17 13.75C15.2051 13.75 13.75 15.2051 13.75 17V22H12.25V12Z" fill="white"/></svg>
+                </div>
+
+                <div class="page-social relative">
+                    <a class="social-icon-anchor" aria-label="whatsapp" target="_blank" rel="noopener nofollow" href="https://whatsapp.com"></a>
+                    <svg class="social-icon-fill" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982 1-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.889 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.406 0 0 5.408 0 12.05c0 2.124.555 4.197 1.61 6.021L0 24l6.107-1.59a11.95 11.95 0 0 0 5.943 1.592h.005c6.643 0 12.051-5.408 12.051-12.051 0-3.22-1.253-6.248-3.529-8.526" fill="white"/>
+                    </svg>
+                </div>
+
+                <div class="page-social relative">
+                    <a class="social-icon-anchor" aria-label="twitter" target="_blank" rel="noopener nofollow" href="https://twitter.com/gdsciiitkalyani"></a>
+                    <svg class="social-icon-fill" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                      <path d="M0 0L11.551 16.875L0.244653 30H2.74965L12.6573 18.491L20.5355 30H30L17.932 12.371L28.5813 0H26.084L16.8241 10.7504L9.46453 0H0ZM2.99123 1.57895H8.63517L27.0088 28.4211H21.3648L2.99123 1.57895Z" fill="white"/>
+                    </svg>
+                </div>
+
+                <div class="page-social relative">
+                    <a class="social-icon-anchor" aria-label="discord" target="_blank" rel="noopener nofollow" href="https://discord.gg/juMP9FVb"></a>
+                    <svg class="social-icon-fill" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" fill="white"/>
+                    </svg>
+                </div>
+
+                <div class="page-social relative">
+                    <a class="social-icon-anchor" aria-label="github" target="_blank" rel="noopener nofollow" href="https://github.com/GDSC-IIIT-Kalyani"></a>
+                    <svg class="social-icon-fill" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.7998 28.2998C19.3998 28.2998 18.9998 27.9998 18.9998 27.4998V20.1998C18.9998 18.9998 18.9998 18.4998 18.4998 17.9998C18.2998 17.7998 18.1998 17.4998 18.2998 17.1998C18.3998 16.8998 18.5998 16.6998 18.8998 16.6998C22.4998 16.2998 24.6998 15.0998 24.6998 9.99982C24.6998 8.69982 24.1998 7.39982 23.2998 6.49982C23.0998 6.29982 22.9998 5.99982 23.0998 5.69982C23.2998 5.09982 23.3998 4.59982 23.3998 3.99982C23.3998 3.59982 23.2998 3.09982 23.1998 2.69982C22.6998 2.79982 21.5998 2.99982 19.7998 4.19982C19.5998 4.29982 19.3998 4.29982 19.1998 4.29982C16.7998 3.69982 14.1998 3.69982 11.7998 4.29982C11.5998 4.39982 11.3998 4.29982 11.1998 4.19982C9.3998 3.09982 8.2998 2.79982 7.7998 2.79982C7.6998 3.19982 7.5998 3.59982 7.5998 4.09982C7.5998 4.69982 7.6998 5.29982 7.8998 5.79982C7.9998 6.09982 7.8998 6.39982 7.6998 6.59982C7.1998 7.09982 6.8998 7.59982 6.5998 8.19982C6.3998 8.79982 6.1998 9.39982 6.1998 10.0998C6.1998 15.0998 8.3998 16.3998 11.9998 16.7998C12.2998 16.7998 12.4998 16.9998 12.5998 17.2998C12.6998 17.5998 12.5998 17.8998 12.3998 18.0998C11.9998 18.4998 11.7998 19.2998 11.8998 20.4998V22.4998V22.5998V27.5998C11.8998 27.9998 11.5998 28.3998 11.0998 28.3998C10.5998 28.3998 10.2998 28.0998 10.2998 27.5998V23.5998C6.9998 24.1998 5.6998 22.1998 4.8998 20.7998C4.4998 20.0998 4.0998 19.4998 3.6998 19.3998C3.2998 19.2998 3.0998 18.8998 3.1998 18.4998C3.2998 18.0998 3.6998 17.8998 4.0998 17.9998C5.0998 18.2998 5.6998 19.1998 6.1998 20.0998C7.0998 21.4998 7.7998 22.7998 10.3998 22.1998V20.7998C10.2998 19.7998 10.3998 18.9998 10.5998 18.3998C7.4998 17.7998 4.5998 16.1998 4.5998 10.3998C4.5998 9.49982 4.7998 8.69982 5.0998 7.89982C5.4998 6.99982 5.8998 6.39982 6.2998 5.89982C6.1998 5.29982 6.0998 4.69982 6.0998 3.99982C6.0998 3.19982 6.2998 2.39982 6.5998 1.69982C6.6998 1.49982 6.8998 1.29982 7.0998 1.29982C7.3998 1.19982 8.7998 0.999818 11.7998 2.79982C14.2998 2.19982 16.8998 2.19982 19.2998 2.79982C22.2998 0.999818 23.6998 1.19982 23.9998 1.29982C24.1998 1.39982 24.3998 1.49982 24.4998 1.69982C24.7998 2.39982 24.9998 3.19982 24.9998 3.99982C24.9998 4.59982 24.8998 5.29982 24.7998 5.89982C25.7998 7.09982 26.3998 8.49982 26.3998 10.0998C26.3998 15.8998 23.5998 17.5998 20.4998 18.0998C20.6998 18.7998 20.6998 19.4998 20.6998 20.1998V27.4998C20.5998 27.9998 20.1998 28.2998 19.7998 28.2998Z" fill="white"/></svg>
+                </div>
+
+                <div class="page-social relative">
+                    <a class="social-icon-anchor" aria-label="youtube" target="_blank" rel="noopener nofollow" href="https://www.youtube.com/channel/UCvRPKamvUtnQhij5y1MF11A"></a>
+                    <svg class="social-icon-fill" width="32" height="23" viewBox="0 0 32 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.8957 1.75015L15.9999 1.75L16.1044 1.75014C16.1732 1.75028 16.2745 1.75056 16.4045 1.75111C16.6644 1.75223 17.0386 1.75445 17.4952 1.75891C18.4085 1.76783 19.6499 1.78567 20.9635 1.82131C22.2782 1.85698 23.6598 1.91034 24.8551 1.98995C26.0595 2.07016 27.0177 2.17386 27.5355 2.29808C28.0453 2.44475 28.5079 2.72226 28.8773 3.10312C29.2444 3.48152 29.5066 3.94875 29.6386 4.45887C30.0598 6.8031 30.2642 9.18116 30.2492 11.5629L30.2492 11.5703C30.2577 13.9164 30.0533 16.2583 29.6385 18.5674C29.5066 19.0775 29.2443 19.5447 28.8773 19.9231C28.506 20.3059 28.0405 20.5843 27.5277 20.7303C27.0178 20.8657 26.0613 20.9798 24.8504 21.0681C23.6564 21.1552 22.2758 21.2136 20.9616 21.2526C19.6485 21.2917 18.4075 21.3112 17.4945 21.321C17.0381 21.3258 16.664 21.3283 16.4042 21.3295C16.2743 21.3301 16.173 21.3304 16.1043 21.3306L15.9997 21.3307L15.8957 21.3306C15.827 21.3304 15.7257 21.3301 15.5958 21.3295C15.336 21.3283 14.9619 21.3258 14.5055 21.321C13.5925 21.3112 12.3515 21.2917 11.0384 21.2526C9.72417 21.2136 8.34364 21.1552 7.14962 21.0681C5.93628 20.9796 4.9783 20.8653 4.46918 20.7295C3.96557 20.5913 3.50602 20.3258 3.13483 19.9584C2.77149 19.5988 2.50481 19.1535 2.3592 18.6639C1.93951 16.3237 1.73588 13.9499 1.75081 11.5723L1.75077 11.5639C1.73909 9.20003 1.9435 6.84004 2.36145 4.5134C2.49338 4.00328 2.75565 3.53606 3.1227 3.15766C3.49402 2.77485 3.95947 2.49647 4.47232 2.35039C4.98224 2.21498 5.93877 2.10095 7.14962 2.01263C8.34364 1.92554 9.72417 1.86713 11.0384 1.82807C12.3515 1.78905 13.5925 1.76953 14.5055 1.75976C14.9619 1.75488 15.336 1.75244 15.5958 1.75122C15.7257 1.75061 15.827 1.7503 15.8957 1.75015ZM15.8924 22.8306L15.9998 22.8307L16.1076 22.8306C16.1775 22.8304 16.28 22.8301 16.4112 22.8295C16.6736 22.8283 17.0507 22.8258 17.5105 22.8209C18.4297 22.811 19.6807 22.7914 21.0061 22.752C22.3303 22.7126 23.7349 22.6534 24.9595 22.5641C26.1631 22.4763 27.2564 22.3556 27.9204 22.178L27.9308 22.1752C28.6997 21.9576 29.3976 21.541 29.954 20.9674C30.5104 20.3939 30.9055 19.6836 31.0995 18.9085C31.1011 18.9024 31.1025 18.8963 31.1039 18.8903C31.1061 18.88 31.1082 18.8698 31.1101 18.8594C31.5439 16.4536 31.7578 14.0133 31.7492 11.5687C31.7646 9.08694 31.5506 6.60908 31.1101 4.16669L30.372 4.29983L31.0995 4.11772C30.9055 3.34255 30.5104 2.63231 29.954 2.05873C29.3976 1.48516 28.6997 1.06856 27.9308 0.851024C27.9221 0.848559 27.9134 0.846253 27.9046 0.844105C27.2464 0.683399 26.1587 0.573439 24.9548 0.493264C23.7315 0.411798 22.328 0.35778 21.0042 0.321863C19.6793 0.285917 18.4288 0.26796 17.5098 0.258984C17.0502 0.254495 16.6732 0.252249 16.4109 0.251125C16.2797 0.250564 16.1773 0.250282 16.1074 0.250141L15.9998 0.25L15.8924 0.250155C15.8225 0.250309 15.72 0.250618 15.5888 0.251233C15.3264 0.252465 14.9493 0.254925 14.4895 0.259844C13.5703 0.269677 12.3193 0.28935 10.9939 0.328736C9.66967 0.368086 8.26511 0.427283 7.04051 0.516604C5.83687 0.604395 4.74362 0.725029 4.07955 0.902629L4.06916 0.905567C3.30026 1.1231 2.60238 1.5397 2.04601 2.11328C1.48964 2.68685 1.09449 3.39709 0.900464 4.17227C0.896406 4.18848 0.892891 4.20482 0.889925 4.22127C0.452803 6.64521 0.238855 9.10412 0.250768 11.5671C0.235446 14.0487 0.449408 16.5264 0.889931 18.9686C0.894325 18.9929 0.899921 19.0171 0.906701 19.0409C1.1206 19.792 1.52461 20.4752 2.07968 21.0245C2.63475 21.5739 3.32213 21.9708 4.0754 22.1769L4.07957 22.178C4.74364 22.3556 5.83687 22.4763 7.04051 22.5641C8.26511 22.6534 9.66967 22.7126 10.9939 22.752C12.3193 22.7914 13.5703 22.811 14.4895 22.8209C14.9493 22.8258 15.3264 22.8283 15.5888 22.8295C15.72 22.8301 15.8225 22.8304 15.8924 22.8306ZM13.3024 6.45743C13.0702 6.3254 12.7854 6.32679 12.5545 6.46108C12.3237 6.59537 12.1816 6.8423 12.1816 7.10938V16.0271C12.1816 16.2942 12.3237 16.5411 12.5545 16.6754C12.7854 16.8097 13.0702 16.8111 13.3024 16.679L21.1429 12.2202C21.3773 12.0869 21.5221 11.8379 21.5221 11.5682C21.5221 11.2985 21.3773 11.0496 21.1429 10.9163L13.3024 6.45743ZM19.255 11.5682L13.6816 14.7378V8.39869L19.255 11.5682Z" fill="white"/></svg>
+                </div>
+
+                <div class="page-social relative">
+                    <a class="social-icon-anchor" aria-label="spotify" target="_blank" rel="noopener nofollow" href="https://open.spotify.com"></a>
+                    <svg class="social-icon-fill" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 1.75C7.68139 1.75 1.75 7.68252 1.75 15C1.75 22.3175 7.68139 28.25 15 28.25C22.3186 28.25 28.25 22.3175 28.25 15C28.25 7.68252 22.3186 1.75 15 1.75ZM0.25 15C0.25 6.85418 6.85287 0.25 15 0.25C23.1471 0.25 29.75 6.85418 29.75 15C29.75 23.1458 23.1471 29.75 15 29.75C6.85287 29.75 0.25 23.1458 0.25 15ZM15.4714 10.3453C12.198 10.0773 8.86216 10.4773 6.11942 11.4463L5.61971 10.032C8.58288 8.98505 12.1332 8.56694 15.5938 8.85035C19.0518 9.13354 22.4772 10.1221 25.1605 11.9448L24.3177 13.1857C21.9039 11.5461 18.7474 10.6136 15.4714 10.3453ZM22.4757 18.0441C18.4175 15.1309 13.534 14.5134 6.60892 15.7386L6.3476 14.2615C13.4737 13.0008 18.8308 13.5811 23.3504 16.8255L22.4757 18.0441ZM14.1328 19.527C11.7187 19.2898 9.26409 19.5021 7.26459 19.9895L6.90932 18.5322C9.06965 18.0056 11.694 17.7802 14.2794 18.0342C16.8601 18.2878 19.458 19.0248 21.5183 20.4734L20.6556 21.7005C18.8738 20.4477 16.5516 19.7647 14.1328 19.527Z" fill="white"/></svg>
+                </div>
+
+                <div class="page-social relative">
+                    <a class="social-icon-anchor" aria-label="email" target="_blank" rel="noopener nofollow" href="mailto:gdg.iiitkalyani@gmail.com"></a>
+                    <svg class="social-icon-fill" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.25C1.48122 3.25 0.25 4.48121 0.25 6V24.4C0.25 25.9188 1.48122 27.15 3 27.15H27C28.5188 27.15 29.75 25.9188 29.75 24.4V6C29.75 4.48122 28.5188 3.25 27 3.25H3ZM1.75 6C1.75 5.30964 2.30964 4.75 3 4.75H27C27.6904 4.75 28.25 5.30964 28.25 6V24.4C28.25 25.0904 27.6904 25.65 27 25.65H3C2.30964 25.65 1.75 25.0904 1.75 24.4V6ZM24.4101 10.2003L15.4501 16.9203C15.1834 17.1203 14.8167 17.1203 14.5501 16.9203L5.59008 10.2003C5.25871 9.95178 5.19156 9.48168 5.44008 9.15031C5.68861 8.81894 6.15871 8.75178 6.49008 9.00031L15.0001 15.3828L23.5101 9.00031C23.8415 8.75178 24.3116 8.81894 24.5601 9.15031C24.8086 9.48168 24.7415 9.95178 24.4101 10.2003Z" fill="white"/></svg>
+                </div>
+                
+            </div>
+            
+            <div class="mt-24">
+
+             <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center absolute"></div>
+                    <a target="_blank" rel="noopener nofollow" class="page-item-each py-10 flex-both-center" href="https://whatsapp.com">
+                        <img class="link-each-image" src="whatsapp.png" alt="Whatsapp" />
+                        <span class="item-title text-center">Join us on whatsapp</span>
+                    </a>
+                </div>
+                
+
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center absolute"></div>
+                    <a target="_blank" rel="noopener nofollow" class="page-item-each py-10 flex-both-center" href="https://gdg.community.dev/gdg-on-campus-indian-institute-of-information-technology-kalyani-india/">
+                        <img class="link-each-image" src="https://cdn.bio.link/uploads/thumbnails/2021-08-25/I8nzyZX3nCiuT7uSyxePNuplpzRDJzk3.png" alt="Become a member"/>
+                        <span class="item-title text-center">Become a member</span>
+                    </a>
+                </div>
+
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center absolute"></div>
+                    <a target="_blank" rel="noopener nofollow" class="page-item-each py-10 flex-both-center" href="https://winter-of-code.tech/">
+                        <img class="link-each-image" src="https://cdn.bio.link/uploads/thumbnails/2024-10-04/YqOSF0nBUrHLNjcr59cEz4V6VYzUdQXo.png" alt="Winter of Code"/>
+                        <span class="item-title text-center">Winter of Code</span>
+                    </a>
+                </div>
+
+                
+
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center absolute"></div>
+                    <a target="_blank" rel="noopener nofollow" class="page-item-each py-10 flex-both-center" href="https://www.youtube.com/playlist?list=PLTzgn5VEtSmTQntIGYl4KlpucoImBjw1G">
+                        <img class="link-each-image" src="https://cdn.bio.link/uploads/thumbnails/2024-09-26/vC4JsiddFhClUJyyZbQqyMv0uljd5qEd.png" alt="Tech Talks"/>
+                        <span class="item-title text-center">Tech Talks</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
